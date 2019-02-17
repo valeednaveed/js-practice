@@ -42,3 +42,13 @@ console.log(data);
 Promise.all([errorPromise,errorPromise2]).catch((err)=>{
     console.log(err); 
     })
+
+    let func = fetch("http://api.icndb.com/jokes").then((res)=>{
+        return res.json(); 
+    }); 
+
+    func
+    .then((jsonres)=>{
+        console.log(JSON.stringify(jsonres)); 
+
+    })
